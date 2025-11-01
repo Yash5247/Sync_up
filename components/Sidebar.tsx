@@ -26,7 +26,7 @@ const Sidebar = () => {
       <div
         className={`${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 transition-transform duration-300 bg-gray-900 flex flex-col fixed left-[-1px] top-0 z-40`}
+        } lg:translate-x-0 transition-transform duration-300 bg-gray-900 dark:bg-gray-950 flex flex-col fixed left-[-1px] top-0 z-40`}
         style={{ width: '241px', height: '1070px' }}
       >
         {isMobileOpen && (
@@ -56,8 +56,8 @@ const Sidebar = () => {
                 href={item.path}
                 className={`flex items-center gap-3 px-4 py-3 mb-2 rounded-lg transition-colors ${
                   isActive
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-400 hover:text-gray-200"
+                    ? "bg-blue-600 dark:bg-blue-700 text-white"
+                    : "text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300"
                 }`}
               >
                 <span className="text-lg">{item.icon}</span>
@@ -68,11 +68,11 @@ const Sidebar = () => {
         </nav>
 
         <div className="px-4 pb-6">
-          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer">
             <span className="text-lg">⚙️</span>
             <span>Settings</span>
           </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer">
             <span className="text-lg">🚪</span>
             <span>Logout</span>
           </div>
