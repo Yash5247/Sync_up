@@ -7,75 +7,84 @@ import ThemeToggle from "@/components/ThemeToggle";
 export default function Dashboard() {
   const stats = [
     {
-      title: "Total Order",
-      value: "40,689",
-      change: "8.5% Up from yesterday",
-      changeType: "up" as const,
-      icon: "📦",
-      iconBg: "bg-orange-500",
-      position: { top: "171px", left: "562px" },
-    },
-    {
-      title: "Total Sales",
-      value: "$89,000",
-      change: "4.3% Down from yesterday",
-      changeType: "down" as const,
-      icon: "💰",
-      iconBg: "bg-green-400",
-      position: { top: "171px", left: "854px" },
-    },
-    {
-      title: "Order Pending",
-      value: "200",
-      change: "4.3% Down from yesterday",
-      changeType: "down" as const,
-      icon: "⏳",
-      iconBg: "bg-yellow-500",
-      position: { top: "171px", left: "1146px" },
-    },
-    {
-      title: "Total Users",
+      title: "Total User",
       value: "40,689",
       change: "8.5% Up from yesterday",
       changeType: "up" as const,
       icon: "👥",
       iconBg: "bg-purple-500",
-      position: { top: "352px", left: "272px" },
+      position: { top: "101px", left: "32px" },
     },
     {
-      title: "Total Order",
+      title: "Daily Active Users",
+      value: "10,293",
+      change: "1.3% Up from past week",
+      changeType: "up" as const,
+      icon: "📦",
+      iconBg: "bg-yellow-500",
+      position: { top: "101px", left: "314px" },
+    },
+    {
+      title: "New Signups",
+      value: "$89,000",
+      change: "4.3% Down from yesterday",
+      changeType: "down" as const,
+      icon: "📈",
+      iconBg: "bg-green-400",
+      position: { top: "101px", left: "596px" },
+    },
+    {
+      title: "Viral Coefficient Ratio",
+      value: "1.2",
+      change: "1.8% Up from yesterday",
+      changeType: "up" as const,
+      icon: "🕐",
+      iconBg: "bg-orange-500",
+      position: { top: "101px", left: "878px" },
+    },
+    {
+      title: "Total",
       value: "40,689",
       change: "8.5% Up from yesterday",
       changeType: "up" as const,
       icon: "📦",
       iconBg: "bg-orange-500",
-      position: { top: "352px", left: "564px" },
+      position: { top: "282px", left: "32px" },
     },
     {
-      title: "Total Sales",
-      value: "$89,000",
-      change: "4.3% Down from yesterday",
-      changeType: "down" as const,
-      icon: "💰",
-      iconBg: "bg-green-400",
-      position: { top: "352px", left: "856px" },
+      title: "Active Job Post",
+      value: "10,293",
+      change: "1.3% Up from past week",
+      changeType: "up" as const,
+      icon: "🔍",
+      iconBg: "bg-blue-400",
+      position: { top: "282px", left: "314px" },
     },
     {
-      title: "Order Pending",
+      title: "Total Job Applications",
       value: "200",
       change: "4.3% Down from yesterday",
       changeType: "down" as const,
-      icon: "⏳",
-      iconBg: "bg-yellow-500",
-      position: { top: "352px", left: "1148px" },
+      icon: "📄",
+      iconBg: "bg-purple-500",
+      position: { top: "282px", left: "596px" },
+    },
+    {
+      title: "Total recruiters",
+      value: "100",
+      change: "1.8% Up from yesterday",
+      changeType: "up" as const,
+      icon: "👥",
+      iconBg: "bg-pink-500",
+      position: { top: "282px", left: "878px" },
     },
   ];
 
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       <Sidebar />
-      <div className="relative" style={{ marginLeft: "240px", width: "1442px", minHeight: "1500px" }}>
-        <div className="bg-white dark:bg-gray-800 shadow-sm" style={{ width: "1201px", height: "70px", position: "relative", zIndex: 10 }}>
+      <div className="relative" style={{ marginLeft: "240px", width: "1201px", minHeight: "1500px" }}>
+        <div className="bg-white dark:bg-gray-800 shadow-sm fixed top-0" style={{ width: "1201px", height: "70px", left: "240px", zIndex: 10 }}>
           <div className="flex items-center justify-between h-full px-6">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
             <div className="flex items-center gap-4">
@@ -99,7 +108,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative" style={{ marginTop: "70px" }}>
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -116,13 +125,13 @@ export default function Dashboard() {
           <div
             className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
-              top: "550px",
-              left: "272px",
+              top: "463px",
+              left: "32px",
               width: "1138px",
               height: "444px",
             }}
           >
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Sales Details</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Total Users</h2>
             <div className="h-80 w-full relative" style={{ minHeight: "320px" }}>
               <svg className="w-full h-full" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" style={{ width: "100%", height: "100%" }}>
                 <defs>
@@ -177,8 +186,8 @@ export default function Dashboard() {
           <div
             className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
-              top: "550px",
-              left: "272px",
+              top: "927px",
+              left: "32px",
               width: "583px",
               height: "420px",
             }}
@@ -227,8 +236,8 @@ export default function Dashboard() {
           <div
             className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
-              top: "550px",
-              left: "875px",
+              top: "927px",
+              left: "635px",
               width: "517px",
               height: "420px",
             }}
