@@ -47,7 +47,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <nav className="flex-1 px-4">
+        <nav className="flex-1 px-4 overflow-y-auto">
           {menuItems.map((item) => {
             const isActive = pathname === item.path;
             return (
@@ -67,12 +67,12 @@ const Sidebar = () => {
           })}
         </nav>
 
-        <div className="px-4 pb-6">
-          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer">
+        <div className="px-4 pb-6 mt-auto">
+          <div className="flex items-center gap-3 px-4 py-3 mb-2 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer rounded-lg transition-colors">
             <span className="text-lg">⚙️</span>
             <span>Settings</span>
           </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer">
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer rounded-lg transition-colors">
             <span className="text-lg">🚪</span>
             <span>Logout</span>
           </div>
