@@ -19,20 +19,20 @@ const Sidebar = () => {
     <>
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-gray-900 text-white p-2 rounded"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-white text-gray-900 p-2 rounded shadow-md"
       >
         ☰
       </button>
       <div
         className={`${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 transition-transform duration-300 bg-gray-900 dark:bg-gray-950 flex flex-col fixed left-[-1px] top-0 z-40`}
+        } lg:translate-x-0 transition-transform duration-300 bg-white dark:bg-gray-900 flex flex-col fixed left-[-1px] top-0 z-40 shadow-lg`}
         style={{ width: '241px', height: '1070px' }}
       >
         {isMobileOpen && (
           <button
             onClick={() => setIsMobileOpen(false)}
-            className="lg:hidden absolute top-4 right-4 text-white text-2xl"
+            className="lg:hidden absolute top-4 right-4 text-gray-700 dark:text-white text-2xl"
           >
             ×
           </button>
@@ -57,7 +57,7 @@ const Sidebar = () => {
                 className={`flex items-center gap-3 px-4 py-3 mb-2 rounded-lg transition-colors ${
                   isActive
                     ? "bg-blue-600 dark:bg-blue-700 text-white"
-                    : "text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300"
+                    : "text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-200"
                 }`}
               >
                 <span className="text-lg">{item.icon}</span>
@@ -68,11 +68,11 @@ const Sidebar = () => {
         </nav>
 
         <div className="px-4 pb-6 flex-shrink-0">
-          <div className="flex items-center gap-3 px-4 py-3 mb-2 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer rounded-lg transition-colors">
+          <div className="flex items-center gap-3 px-4 py-3 mb-2 text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer rounded-lg transition-colors">
             <span className="text-lg">⚙️</span>
             <span>Settings</span>
           </div>
-          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer rounded-lg transition-colors">
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer rounded-lg transition-colors">
             <span className="text-lg">🚪</span>
             <span>Logout</span>
           </div>
