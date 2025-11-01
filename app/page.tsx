@@ -74,8 +74,8 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       <Sidebar />
-      <div className="relative" style={{ marginLeft: "240px", width: "1201px", minHeight: "1500px" }}>
-        <div className="bg-white dark:bg-gray-800 shadow-sm fixed top-0" style={{ width: "1201px", height: "70px", left: "240px", zIndex: 10 }}>
+      <div className="relative" style={{ marginLeft: "240px", width: "1442px", minHeight: "1500px" }}>
+        <div className="bg-white dark:bg-gray-800 shadow-sm" style={{ width: "1201px", height: "70px", position: "relative", zIndex: 10 }}>
           <div className="flex items-center justify-between h-full px-6">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
             <div className="flex items-center gap-4">
@@ -99,7 +99,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="relative" style={{ marginTop: "70px" }}>
+        <div className="relative">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -114,11 +114,11 @@ export default function Dashboard() {
           ))}
 
           <div
-            className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 z-10"
+            className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
               top: "550px",
               left: "272px",
-              width: "929px",
+              width: "1138px",
               height: "444px",
             }}
           >
@@ -177,7 +177,7 @@ export default function Dashboard() {
           <div
             className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
-              top: "1020px",
+              top: "550px",
               left: "272px",
               width: "583px",
               height: "420px",
@@ -227,7 +227,7 @@ export default function Dashboard() {
           <div
             className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
             style={{
-              top: "1020px",
+              top: "550px",
               left: "875px",
               width: "517px",
               height: "420px",
