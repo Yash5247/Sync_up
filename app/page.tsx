@@ -74,7 +74,7 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       <Sidebar />
-      <div className="relative" style={{ marginLeft: "240px", width: "1201px", minHeight: "1070px" }}>
+      <div className="relative" style={{ marginLeft: "240px", width: "1201px", minHeight: "1500px" }}>
         <div className="bg-white dark:bg-gray-800 shadow-sm fixed top-0" style={{ width: "1201px", height: "70px", left: "240px", zIndex: 10 }}>
           <div className="flex items-center justify-between h-full px-6">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
@@ -114,17 +114,17 @@ export default function Dashboard() {
           ))}
 
           <div
-            className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
+            className="absolute bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 z-10"
             style={{
               top: "550px",
               left: "272px",
-              width: "1138px",
+              width: "929px",
               height: "444px",
             }}
           >
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Sales Details</h2>
-            <div className="h-80 relative">
-              <svg className="w-full h-full" viewBox="0 0 1000 300" preserveAspectRatio="none">
+            <div className="h-80 w-full relative" style={{ minHeight: "320px" }}>
+              <svg className="w-full h-full" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" style={{ width: "100%", height: "100%" }}>
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
