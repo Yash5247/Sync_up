@@ -26,7 +26,8 @@ const Sidebar = () => {
       <div
         className={`${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 transition-transform duration-300 w-64 h-screen bg-gray-900 flex flex-col fixed left-0 top-0 z-40`}
+        } lg:translate-x-0 transition-transform duration-300 bg-gray-900 flex flex-col fixed left-[-1px] top-0 z-40`}
+        style={{ width: '241px', height: '1070px' }}
       >
         {isMobileOpen && (
           <button

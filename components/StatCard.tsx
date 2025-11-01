@@ -9,7 +9,7 @@ interface StatCardProps {
 
 const StatCard = ({ title, value, change, changeType, icon, iconBg }: StatCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div className="bg-white rounded-lg shadow-sm p-6" style={{ width: "262px", height: "161px" }}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-gray-600 text-sm font-medium">{title}</h3>
         <div className={`w-10 h-10 rounded-lg ${iconBg} flex items-center justify-center`}>
