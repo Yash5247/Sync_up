@@ -37,7 +37,7 @@ const Sidebar = () => {
             ×
           </button>
         )}
-        <div className="p-6">
+        <div className="p-6 flex-shrink-0">
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold text-blue-700">Sync</span>
             <span className="text-2xl font-bold text-blue-400">Up</span>
@@ -47,7 +47,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <nav className="flex-1 px-4 overflow-y-auto">
+        <nav className="flex-1 px-4 py-2 min-h-0 overflow-y-auto">
           {menuItems.map((item) => {
             const isActive = pathname === item.path;
             return (
@@ -67,7 +67,7 @@ const Sidebar = () => {
           })}
         </nav>
 
-        <div className="px-4 pb-6 mt-auto">
+        <div className="px-4 pb-6 flex-shrink-0">
           <div className="flex items-center gap-3 px-4 py-3 mb-2 text-gray-400 dark:text-gray-500 hover:text-gray-200 dark:hover:text-gray-300 cursor-pointer rounded-lg transition-colors">
             <span className="text-lg">⚙️</span>
             <span>Settings</span>
