@@ -36,46 +36,46 @@ const Sidebar = () => {
             ×
           </button>
         )}
-      <div className="p-6">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-blue-700">Sync</span>
-          <span className="text-2xl font-bold text-blue-400">Up</span>
-          <div className="w-4 h-4 bg-blue-500 rounded flex items-center justify-center">
-            <span className="text-white text-xs">↑</span>
+        <div className="p-6">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-blue-700">Sync</span>
+            <span className="text-2xl font-bold text-blue-400">Up</span>
+            <div className="w-4 h-4 bg-blue-500 rounded flex items-center justify-center">
+              <span className="text-white text-xs">↑</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <nav className="flex-1 px-4">
-        {menuItems.map((item) => {
-          const isActive = pathname === item.path;
-          return (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`flex items-center gap-3 px-4 py-3 mb-2 rounded-lg transition-colors ${
-                isActive
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-400 hover:text-gray-200"
-              }`}
-            >
-              <span className="text-lg">{item.icon}</span>
-              <span>{item.name}</span>
-            </Link>
-          );
-        })}
-      </nav>
+        <nav className="flex-1 px-4">
+          {menuItems.map((item) => {
+            const isActive = pathname === item.path;
+            return (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`flex items-center gap-3 px-4 py-3 mb-2 rounded-lg transition-colors ${
+                  isActive
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-400 hover:text-gray-200"
+                }`}
+              >
+                <span className="text-lg">{item.icon}</span>
+                <span>{item.name}</span>
+              </Link>
+            );
+          })}
+        </nav>
 
-      <div className="px-4 pb-6">
-        <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
-          <span className="text-lg">⚙️</span>
-          <span>Settings</span>
+        <div className="px-4 pb-6">
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-lg">⚙️</span>
+            <span>Settings</span>
+          </div>
+          <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-lg">🚪</span>
+            <span>Logout</span>
+          </div>
         </div>
-        <div className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gray-200 cursor-pointer">
-          <span className="text-lg">🚪</span>
-          <span>Logout</span>
-        </div>
-      </div>
       </div>
       {isMobileOpen && (
         <div
