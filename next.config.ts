@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['mocki.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'mocki.io',
+      },
+    ],
   },
 };
 
